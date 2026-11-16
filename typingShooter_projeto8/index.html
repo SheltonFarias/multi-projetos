@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sinal Fantasma, um jogo autoral de digitação em canvas.">
+    <title>Sinal Fantasma — Typing Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="masthead">
+            <p class="kicker">Estação de decodificação</p>
+            <h1>Sinal Fantasma</h1>
+            <p class="subtitle">Digite para limpar os ruídos antes que atinjam a antena.</p>
+        </header>
+
+        <section class="game-frame" aria-label="Área do jogo">
+            <canvas id="game" width="720" height="760" aria-label="Jogo Sinal Fantasma"></canvas>
+            <div id="overlay" class="overlay" role="dialog" aria-live="polite">
+                <div class="overlay-card">
+                    <p id="overlay-kicker" class="kicker">Canal 08</p>
+                    <h2 id="overlay-title">Sinal Fantasma</h2>
+                    <p id="overlay-copy">A primeira letra trava um ruído. Continue digitando para decodificá-lo.</p>
+                    <button id="primary-action" type="button">Iniciar transmissão</button>
+                    <p class="keys">P pausa · Enter pulso de área · Esc volta ao título</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hud" aria-label="Indicadores da partida">
+            <div><span>Pontos</span><strong id="score">000000</strong></div>
+            <div><span>Onda</span><strong id="wave">01</strong></div>
+            <div><span>Sequência</span><strong id="streak">×1</strong></div>
+            <div><span>Precisão</span><strong id="accuracy">100%</strong></div>
+        </section>
+
+        <p class="notice" id="notice" aria-live="polite">Pronto para transmitir.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
